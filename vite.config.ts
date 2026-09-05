@@ -17,6 +17,9 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  // Repo is served from https://vsenses55.github.io/lead-from-behind/, so assets
+  // need this base path in production builds.
+  base: '/lead-from-behind/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
