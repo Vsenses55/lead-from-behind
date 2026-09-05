@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Avenir fallback to system fonts with similar characteristics */
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Avenir Next'), local('Avenir'), local('Century Gothic'), local('Arial');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Avenir Next Bold'), local('Avenir Heavy'), local('Arial Black'), local('Arial Bold');
+}
+
+/* Menlo fallback to monospace fonts */
+@font-face {
+  font-family: 'Menlo';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Menlo'), local('Monaco'), local('Consolas'), local('Courier New'), local('monospace');
+}
