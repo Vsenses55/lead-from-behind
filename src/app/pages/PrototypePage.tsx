@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import svgPaths from "../../imports/svg-0fgve89dfr";
 import svgPathsContent from "../../imports/svg-bsxkmkagnk";
 import imgVideo from "figma:asset/a67a43242304d62b0f1feba77454bff282ff98e6.png";
@@ -8,6 +9,7 @@ import NumberedContent3 from "../components/NumberedContent3";
 import NumberedContent4 from "../components/NumberedContent4";
 import InstagramPosts from "../components/InstagramPosts";
 import Footer from "../components/Footer";
+import Reveal from "../components/Reveal";
 
 export default function PrototypePage() {
   return (
@@ -55,7 +57,7 @@ export default function PrototypePage() {
           {/* Navigation Items - Desktop Only */}
           <div className="hidden md:flex items-center gap-[19px] h-[30px]">
             <div className="flex items-center justify-center h-full">
-              <p className="text-[20px] leading-[32px] text-[#28324b] whitespace-nowrap" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 500 }}>
+              <p className="text-[20px] leading-[32px] text-[#28324b] whitespace-nowrap" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 600 }}>
                 How to Prevent
               </p>
             </div>
@@ -65,7 +67,7 @@ export default function PrototypePage() {
               </svg>
             </div>
             <div className="flex items-center justify-center h-full">
-              <p className="text-[20px] leading-[32px] text-[#28324b] whitespace-nowrap" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 500 }}>
+              <p className="text-[20px] leading-[32px] text-[#28324b] whitespace-nowrap" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 600 }}>
                 Act
               </p>
             </div>
@@ -75,7 +77,7 @@ export default function PrototypePage() {
               </svg>
             </div>
             <div className="flex items-center justify-center h-full">
-              <p className="text-[20px] leading-[32px] text-[#28324b] whitespace-nowrap" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 500 }}>
+              <p className="text-[20px] leading-[32px] text-[#28324b] whitespace-nowrap" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 600 }}>
                 About
               </p>
             </div>
@@ -113,7 +115,12 @@ export default function PrototypePage() {
         />
         <div className="absolute inset-0 flex items-end px-6 py-10 md:px-[120px] md:py-[80px]">
           <div className="max-w-[1280px] w-full flex items-end">
-            <div className="flex flex-col gap-6 md:gap-[33px] items-start pr-0 md:pr-[24px]">
+            <motion.div
+              className="flex flex-col gap-6 md:gap-[33px] items-start pr-0 md:pr-[24px]"
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
               <h1 className="font-['Montserrat',sans-serif] font-black text-[32px] md:text-[61px] lg:text-[90px] leading-[1.1] md:leading-[60px] lg:leading-[84px] text-white uppercase">
                 WE'RE ON A MISSION TO MAKE COLON CANCER FAMOUS.
               </h1>
@@ -127,7 +134,7 @@ export default function PrototypePage() {
                   </svg>
                 </div>
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -135,7 +142,7 @@ export default function PrototypePage() {
       {/* Content Sections Container with 120px vertical spacing */}
       <div className="w-full flex flex-col gap-[64px] md:gap-[120px] pt-[48px] md:pt-[120px] pb-[64px] md:pb-[120px]">
         {/* 4 Shocking Facts Section */}
-        <div className="w-full flex justify-center px-4 md:px-6">
+        <Reveal className="w-full flex justify-center px-4 md:px-6">
           <div className="w-full max-w-[1440px]">
             <div className="bg-[#28324b] flex flex-col gap-[24px] md:gap-[32px] items-center p-[40px] md:p-[60px] lg:p-[80px] rounded-[20px] md:rounded-[25px]">
               {/* Title Section */}
@@ -172,19 +179,32 @@ export default function PrototypePage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* Signup Form Section */}
-        <SignupForm />
+        <Reveal direction="up" delay={0.05}>
+          <SignupForm />
+        </Reveal>
 
-        {/* Numbered Content Section */}
-        <NumberedContent />
-        <NumberedContent2 />
-        <NumberedContent3 />
-        <NumberedContent4 />
+        {/* Numbered Content Section — alternating slide direction so the
+            list doesn't reveal the same way four times in a row */}
+        <Reveal direction="left">
+          <NumberedContent />
+        </Reveal>
+        <Reveal direction="right">
+          <NumberedContent2 />
+        </Reveal>
+        <Reveal direction="left">
+          <NumberedContent3 />
+        </Reveal>
+        <Reveal direction="right">
+          <NumberedContent4 />
+        </Reveal>
 
         {/* Instagram Posts Section */}
-        <InstagramPosts />
+        <Reveal direction="fade">
+          <InstagramPosts />
+        </Reveal>
       </div>
 
       {/* Footer Section */}
