@@ -1,4 +1,5 @@
 import svgPaths from "../../imports/svg-jcmvsgzmvw";
+import FormField from "./FormField";
 
 export default function SignupForm() {
   return (
@@ -22,54 +23,35 @@ export default function SignupForm() {
           <div className="flex flex-col gap-[32px] md:gap-[48px] items-start w-full max-w-[916px]">
             {/* First Row: First Name & Last Name */}
             <div className="flex flex-col md:flex-row gap-[24px] md:gap-[16px] w-full">
-              <div className="flex flex-col gap-[12px] w-full md:w-[450px]">
-                <label className="font-['Avenir',sans-serif] font-black text-[14px] leading-[16px] text-[#28324b] uppercase" style={{ fontWeight: 900 }}>
-                  FIRST NAME
-                </label>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="bg-white h-[54px] rounded-[8px] border border-[#28324b] px-[25px] py-[19px] text-[16px] leading-[24px] text-[#a3a3a3] placeholder:text-[#a3a3a3]"
-                  style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}
-                />
-              </div>
-              <div className="flex flex-col gap-[12px] w-full md:w-[450px]">
-                <label className="font-['Avenir',sans-serif] font-black text-[14px] leading-[16px] text-[#28324b] uppercase" style={{ fontWeight: 900 }}>
-                  LAST NAME
-                </label>
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="bg-white h-[54px] rounded-[8px] border border-[#28324b] px-[25px] py-[19px] text-[16px] leading-[24px] text-[#a3a3a3] placeholder:text-[#a3a3a3]"
-                  style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}
-                />
-              </div>
+              <FormField id="firstName" label="FIRST NAME" placeholder="First Name" required />
+              <FormField id="lastName" label="LAST NAME" placeholder="Last Name" required />
             </div>
 
             {/* Second Row: Email & Date of Birth */}
             <div className="flex flex-col md:flex-row gap-[24px] md:gap-[16px] w-full">
-              <div className="flex flex-col gap-[12px] w-full md:w-[450px]">
-                <label className="font-['Avenir',sans-serif] font-black text-[14px] leading-[16px] text-[#28324b] uppercase" style={{ fontWeight: 900 }}>
-                  EMAIL
-                </label>
-                <input
-                  type="email"
-                  placeholder="Enter Email Address"
-                  className="bg-white h-[54px] rounded-[8px] border border-[#28324b] px-[25px] py-[19px] text-[16px] leading-[24px] text-[#a3a3a3] placeholder:text-[#a3a3a3]"
-                  style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}
-                />
-              </div>
-              <div className="flex flex-col gap-[12px] w-full md:w-[450px]">
-                <label className="font-['Avenir',sans-serif] font-black text-[14px] leading-[16px] text-[#28324b] uppercase" style={{ fontWeight: 900 }}>
-                  DATE OF BIRTH
-                </label>
-                <input
-                  type="text"
-                  placeholder="00/00/0000"
-                  className="bg-white h-[54px] rounded-[8px] border border-[#28324b] px-[25px] py-[19px] text-[16px] leading-[24px] text-[#a3a3a3] placeholder:text-[#a3a3a3]"
-                  style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}
-                />
-              </div>
+              <FormField
+                id="email"
+                label="EMAIL"
+                type="email"
+                placeholder="Enter Email Address"
+                required
+                validate={(value) => {
+                  if (!value.trim()) return "This field is required.";
+                  if (!/^\S+@\S+\.\S+$/.test(value)) return "Enter a valid email address.";
+                  return null;
+                }}
+              />
+              <FormField
+                id="dob"
+                label="DATE OF BIRTH"
+                placeholder="00/00/0000"
+                required
+                validate={(value) => {
+                  if (!value.trim()) return "This field is required.";
+                  if (!/^\d{2}\/\d{2}\/\d{4}$/.test(value)) return "Use MM/DD/YYYY format.";
+                  return null;
+                }}
+              />
             </div>
           </div>
 
