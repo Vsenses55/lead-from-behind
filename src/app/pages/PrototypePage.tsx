@@ -55,26 +55,16 @@ export default function PrototypePage() {
           </button>
 
           {/* Navigation Items - Desktop Only */}
-          <div className="hidden md:flex items-center gap-[19px] h-[30px]">
+          <div className="hidden md:flex items-center gap-[27.3px] h-[30px]">
             <div className="flex items-center justify-center h-full">
               <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 How to Prevent
               </p>
             </div>
-            <div className="size-[8.3px]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8.30005 8.3">
-                <path d={svgPaths.p267acdf2} fill="black" />
-              </svg>
-            </div>
             <div className="flex items-center justify-center h-full">
               <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 Act
               </p>
-            </div>
-            <div className="size-[8.3px]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8.30005 8.3">
-                <path d={svgPaths.p267acdf2} fill="black" />
-              </svg>
             </div>
             <div className="flex items-center justify-center h-full">
               <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
