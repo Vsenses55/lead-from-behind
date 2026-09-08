@@ -15,7 +15,7 @@ interface PostProps {
 
 function Post({ image, text, hashtags, timestamp = "2d" }: PostProps) {
   return (
-    <div className="bg-white flex flex-col gap-[24px] rounded-[16px] pb-[20px] pt-[18px] w-full">
+    <div className="bg-white flex flex-col gap-[24px] rounded-[16px] pb-[20px] pt-[18px] w-full h-full">
       {/* Header */}
       <div className="flex items-center justify-between px-[20px]">
         <div className="flex gap-[16px] items-center">
@@ -43,8 +43,9 @@ function Post({ image, text, hashtags, timestamp = "2d" }: PostProps) {
         />
       </div>
 
-      {/* Content */}
-      <div className="flex flex-col gap-[24px] px-[40px]">
+      {/* Content — flex-1 so it absorbs any extra card height, keeping
+          the Instagram icon pinned to the bottom regardless of copy length */}
+      <div className="flex flex-col gap-[24px] px-[40px] flex-1">
         <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-[#28324b]" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
           {text}
         </p>
