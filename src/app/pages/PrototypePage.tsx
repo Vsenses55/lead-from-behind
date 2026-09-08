@@ -57,7 +57,7 @@ export default function PrototypePage() {
           {/* Navigation Items - Desktop Only */}
           <div className="hidden md:flex items-center gap-[19px] h-[30px]">
             <div className="flex items-center justify-center h-full">
-              <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+              <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 How to Prevent
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function PrototypePage() {
               </svg>
             </div>
             <div className="flex items-center justify-center h-full">
-              <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+              <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 Act
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function PrototypePage() {
               </svg>
             </div>
             <div className="flex items-center justify-center h-full">
-              <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+              <p className="text-[16px] leading-[32px] text-[#28324b] uppercase tracking-[0.3px] whitespace-nowrap" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
                 About
               </p>
             </div>
