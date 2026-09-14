@@ -8,7 +8,7 @@ export default function NumberedContent2() {
           {/* Content — ordered after the image on mobile so the stack reads
               image, number, headline, body like the other sections; back to
               its normal (left) position at md, where the layout alternates */}
-          <div className="order-2 md:order-1 flex flex-col gap-[32px] md:gap-[40px] items-start w-full md:w-[536px] shrink-0">
+          <div className="order-2 md:order-1 flex flex-col gap-[32px] md:gap-[40px] items-center md:items-start w-full md:w-[536px] shrink-0">
             {/* Numbered Circle */}
             <div className="bg-[#fd0] rounded-full size-[80px] md:size-[112px] flex items-center justify-center shrink-0">
               <p className="font-['Montserrat',sans-serif] font-black text-[40px] md:text-[61px] leading-[1] text-[#28324b] text-center uppercase">
@@ -17,12 +17,12 @@ export default function NumberedContent2() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-['Montserrat',sans-serif] font-extrabold text-[28px] md:text-[39px] leading-[1.1] md:leading-[43px] text-[#28324b]">
+            <h2 className="font-['Montserrat',sans-serif] font-extrabold text-[28px] md:text-[39px] leading-[1.1] md:leading-[43px] text-[#28324b] text-center md:text-left">
               Health disparities are systemic and real
             </h2>
 
             {/* Body Text */}
-            <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-[#28324b]" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
+            <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-[#28324b] text-center md:text-left" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
               People of color tend to receive later-stage diagnoses and lower quality of care. Black Americans get colon cancer about 15% more often than White Americans, and are 35% more likely to die from it. The American Indian and Alaska Native communities experience the highest mortality and incidence rates in the nation.
             </p>
           </div>

@@ -17,7 +17,7 @@ export default function NumberedContent() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col gap-[32px] md:gap-[40px] items-start w-full md:w-[536px] shrink-0">
+          <div className="flex flex-col gap-[32px] md:gap-[40px] items-center md:items-start w-full md:w-[536px] shrink-0">
             {/* Numbered Circle */}
             <div className="bg-[#fd0] rounded-full size-[80px] md:size-[112px] flex items-center justify-center shrink-0">
               <p className="font-['Montserrat',sans-serif] font-black text-[40px] md:text-[61px] leading-[1] text-[#28324b] text-center uppercase">
@@ -26,12 +26,12 @@ export default function NumberedContent() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-['Montserrat',sans-serif] font-extrabold text-[28px] md:text-[39px] leading-[1.1] md:leading-[43px] text-[#28324b]">
+            <h2 className="font-['Montserrat',sans-serif] font-extrabold text-[28px] md:text-[39px] leading-[1.1] md:leading-[43px] text-[#28324b] text-center md:text-left">
               It's killing a lot of people, no matter your gender or age
             </h2>
 
             {/* Body Text */}
-            <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-[#28324b]" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
+            <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-[#28324b] text-center md:text-left" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
               Colon cancer kills more people each year than every other type of cancer except lung cancer. If you are between 45 and 65 right now, cancer is the most likely thing that would kill you. And colon cancer is super common. One in 24 Americans will get colon cancer. And one in 250 of us will get it before we turn 49.
             </p>
           </div>

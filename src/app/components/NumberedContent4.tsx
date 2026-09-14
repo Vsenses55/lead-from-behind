@@ -15,7 +15,7 @@ export default function NumberedContent4() {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col gap-[32px] md:gap-[40px] items-start w-full md:w-[536px] shrink-0">
+          <div className="flex flex-col gap-[32px] md:gap-[40px] items-center md:items-start w-full md:w-[536px] shrink-0">
             {/* Numbered Circle */}
             <div className="bg-[#fd0] rounded-full size-[80px] md:size-[112px] flex items-center justify-center shrink-0">
               <p className="font-['Montserrat',sans-serif] font-black text-[40px] md:text-[61px] leading-[1] text-[#28324b] text-center uppercase">
@@ -24,18 +24,18 @@ export default function NumberedContent4() {
             </div>
 
             {/* Heading */}
-            <div className="flex flex-col gap-[16px] md:gap-[20px]">
-              <h2 className="font-['Montserrat',sans-serif] font-extrabold text-[28px] md:text-[39px] leading-[1.1] md:leading-[43px] text-[#28324b]">
+            <div className="flex flex-col gap-[16px] md:gap-[20px] items-center md:items-start">
+              <h2 className="font-['Montserrat',sans-serif] font-extrabold text-[28px] md:text-[39px] leading-[1.1] md:leading-[43px] text-[#28324b] text-center md:text-left">
                 THE GOOD NEWS:
               </h2>
-              <p className="text-[20px] md:text-[25px] leading-[1.2] md:leading-[25px] text-[#28324b]" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 900 }}>
+              <p className="text-[20px] md:text-[25px] leading-[1.2] md:leading-[25px] text-[#28324b] text-center md:text-left" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 900 }}>
                 <span>Colon Cancer is </span>
                 <span className="text-[#0072ca]">The Preventable Cancer</span>
               </p>
             </div>
 
             {/* Body Text */}
-            <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[35px] text-[#28324b]" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
+            <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[35px] text-[#28324b] text-center md:text-left" style={{ fontFamily: 'Avenir, sans-serif', fontWeight: 400 }}>
               You can prevent colon cancer by finding and removing precancerous polyps before they become cancer. Colonoscopy can prevent cancer or stop it early, and among the at-home options, Cologuard is able to detect precancer and cancer that may be present in the colon.
             </p>
           </div>
