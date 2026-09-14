@@ -5,8 +5,10 @@ export default function NumberedContent2() {
     <div className="w-full flex justify-center px-4 md:px-6">
       <div className="w-full max-w-[1136px]">
         <div className="flex flex-col md:flex-row gap-[40px] md:gap-[64px] items-center justify-center">
-          {/* Content */}
-          <div className="flex flex-col gap-[32px] md:gap-[40px] items-start w-full md:w-[536px] shrink-0">
+          {/* Content — ordered after the image on mobile so the stack reads
+              image, number, headline, body like the other sections; back to
+              its normal (left) position at md, where the layout alternates */}
+          <div className="order-2 md:order-1 flex flex-col gap-[32px] md:gap-[40px] items-start w-full md:w-[536px] shrink-0">
             {/* Numbered Circle */}
             <div className="bg-[#fd0] rounded-full size-[80px] md:size-[112px] flex items-center justify-center shrink-0">
               <p className="font-['Montserrat',sans-serif] font-black text-[40px] md:text-[61px] leading-[1] text-[#28324b] text-center uppercase">
@@ -25,8 +27,9 @@ export default function NumberedContent2() {
             </p>
           </div>
 
-          {/* Image */}
-          <div className="relative w-full md:w-[510px] h-[340px] md:h-[536px] shrink-0">
+          {/* Image — ordered first on mobile, back to its normal (right)
+              position at md */}
+          <div className="order-1 md:order-2 relative w-full md:w-[510px] h-[340px] md:h-[536px] shrink-0">
             <img 
               alt="Smiling person wearing glasses in blue sweater" 
               className="absolute inset-0 w-full h-full object-cover rounded-[20px]" 
